@@ -80,6 +80,6 @@ STRENGTH: Strong
 (Note: Copy manually from terminal)
 
 Generate another? (y/n): n
-Goodbye! ⚡
+Goodbye! 
 
 
