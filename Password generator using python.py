@@ -6,14 +6,14 @@ import sys
 def check_strength(password):
     """Calculates and returns a formatted strength string."""
     if len(password) < 6:
-        return "Weak ⚠️"
+        return "Weak "
     elif len(password) < 10:
-        return "Medium ⚡"
+        return "Medium "
     else:
-        return "Strong 🔥"
+        return "Strong "
 
 def generate_password():
-    print("\n--- ⚡ Hacker Password Generator ---")
+    print("\n--- Hacker Password Generator ---")
     
     try:
         # Get Length
@@ -21,7 +21,7 @@ def generate_password():
         length = int(length_input) if length_input.strip() else 12
 
         if length < 4:
-            print("❌ Error: Minimum length is 4.")
+            print("Error: Minimum length is 4.")
             return
 
         # Settings
@@ -38,7 +38,7 @@ def generate_password():
         if use_symbols: characters += string.punctuation
 
         if not characters:
-            print("❌ Error: Select at least one character type.")
+            print("Error: Select at least one character type.")
             return
 
         # Generation using secrets for security
@@ -53,17 +53,17 @@ def generate_password():
         print("\n(Note: Copy manually from terminal)")
 
     except ValueError:
-        print("❌ Error: Please enter a valid number for length.")
+        print(" Error: Please enter a valid number for length.")
 
 if __name__ == "__main__":
     while True:
         generate_password()
         if input("\nGenerate another? (y/n): ").lower() != 'y':
-            print("Goodbye! ⚡")
+            print("Goodbye!")
             break
 
 Output:
---- ⚡ Hacker Password Generator ---
+---  Hacker Password Generator ---
 Enter password length (default 12): 16
 
 Include character types? (y/n)
@@ -74,7 +74,7 @@ Symbols? (!@#): y
 
 ==============================
 PASSWORD: b7#R9[vQ!p2Lz*Xm
-STRENGTH: Strong 🔥
+STRENGTH: Strong 
 ==============================
 
 (Note: Copy manually from terminal)
